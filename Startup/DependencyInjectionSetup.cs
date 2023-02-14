@@ -1,4 +1,6 @@
-﻿namespace WebResrApi.Startup
+﻿using MongoDB.Driver;
+
+namespace WebRestApi.Startup
 {
     public static class DependencyInjectionSetup
     {
@@ -6,7 +8,11 @@
         {
             service.AddEndpointsApiExplorer();
             service.AddSwaggerGen();
+            service.AddSingleton<IMongoClient, MongoClient>(sp =>
+                new MongoClient(ConfigurationHelper.Configuration?.GetSection("DefaultConnection").Value));
             return service;
         }
+
+
     }
 }

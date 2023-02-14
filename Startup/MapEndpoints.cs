@@ -1,7 +1,8 @@
-﻿using WebResrApi.Database;
-using WebResrApi.Models;
+﻿
 
-namespace WebResrApi.Startup
+using Models;
+
+namespace WebRestApi.Startup
 {
     public static class MapEndpoints
     {

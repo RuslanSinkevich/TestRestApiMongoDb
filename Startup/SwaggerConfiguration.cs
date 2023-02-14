@@ -1,4 +1,4 @@
-﻿namespace WebResrApi.Startup
+﻿namespace WebRestApi.Startup
 {
     public static class SwaggerConfiguration
     {
